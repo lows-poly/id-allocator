@@ -26,7 +26,8 @@ local id_allocator = {};
 id_allocator.ENOSPC = ENOSPC;
 
 function id_allocator.make_allocator( cap )
-	assert( cap ~= nil and cap >= 1 and cap % 1 == 0, "CAPACITY MUST BE A POSITIVE INTEGER" );
+	cap = cap or DEFAULT_CAP;
+	assert( cap >= 1 and cap % 1 == 0, "CAPACITY MUST BE A POSITIVE INTEGER" );
 	return {
 		last_id = 0,
 		capacity = cap or DEFAULT_CAP,
