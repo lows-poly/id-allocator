@@ -1,3 +1,4 @@
+> *Originally designed & optimised for my personal projects*
 # Luau ID Allocator
 
 A bounded numeric ID allocator for Luau on ROBLOX. It issues fresh IDs in order, starting at `1`. Once reaches its capacity, it reuses freed IDs in last-freed-first order.
